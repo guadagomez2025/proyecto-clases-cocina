@@ -1,0 +1,19 @@
+{
+  "name": "proyecto_clases_cocina",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guadagomez2025/proyecto-de-cocina.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guadagomez2025/proyecto-de-cocina/issues"
+  },
+  "homepage": "https://github.com/guadagomez2025/proyecto-de-cocina#readme"
+}

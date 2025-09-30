@@ -6,31 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--SCRIPT DE BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+     <!--ICONOS DE BOOTSTRAP-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="./css/style.css"> <!--LINK A CSS-->
+    <!--LINK A CSS-->
+    <link rel="stylesheet" href="./css/style.css"> 
     <title>Document</title>
 </head>
 
 <body>
-    <header>
-        <img class="logo" src="./img/logo1.png" alt="">
-        <nav class="barranavegacion"> <!--barra de navegación-->
-            <ul> 
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./pages/clases.html">Clases de cocina</a></li>
-                <li><a href="./pages/cenas.html">Cenas como en casa</a></li>
-                <li><a href="./pages/consultas.html">Consultas</a></li>
-            </ul>
-        </nav>
-        <nav class="botonesidiomas"> <!--botones de idiomas-->
-            <ul> 
-                <li><a href="./index.html"><img src="./img/bandera_argentina.png" alt="espanol"></a></li>
-                <li><a href="./pages/home.html"><img src="./img/bandera_granbretana.jpg" alt="ingles"></a></li>
-            </ul>
-        </nav>
+    <header>        
+        <!-- NAVBAR PERSONALIZADO CON BOOTSTRAP -->
+        <nav class="navbar navbar-expand-lg fixed-top"> <!--fixed-top para que quede fijo al hacer scroll-->
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./img/logo1.png" alt="logo" class="logo">
+                </a>
+        
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <!-- Contenido del navbar -->
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./pages/clases.html">Clases de cocina</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/cenas.html">Cenas caseras</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Consultas
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./pages/consultas.html">Preguntas frecuentes</a></li>
+                                <li><a class="dropdown-item" href="./pages/consultas.html">Política de cancelación</a></li>
+                                <li><a class="dropdown-item" href="./pages/consultas.html">Opiniones</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+        
+                    <!-- Botones de idiomas -->
+                    <ul class="navbar-nav idiomas">
+                        <li class="nav-item">
+                            <a href="./index.html"><img src="./img/bandera_argentina.png" alt="espanol"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./pages/home.html"><img src="./img/bandera_granbretana.jpg" alt="ingles"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>  
     </header>
     <main>
-        <section class="galeria_imagenes_bootstrap"> <!--carrusel de BOOTSTRAP-->
+                    <!--CARRUSEL de BOOTSTRAP-->
+        <section class="galeria_imagenes_bootstrap">
             <div id="carouselExampleCaptions" class="carousel slide">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -39,37 +75,29 @@
                         aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
                         aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
-                        aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
-                        aria-label="Slide 5"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="./img/asado1.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
+                            <!--<h5>First slide label</h5>-->
+                            <p>Asado argentino.</p>
+                        </div>
                     </div>
-                </div>
-                    <div class="carousel-item">
-                        <img src="./img/asador.png" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                    </div>
-                </div>
                     <div class="carousel-item">
                         <img src="./img/clase1.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
+                            <!--<h5>Second slide label</h5>-->
+                            <p>Sabores, aromas, texturas propios de la cocina local.</p>
+                        </div>
                     </div>
-                </div>
                     <div class="carousel-item">
                         <img src="./img/empanadas2.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
+                            <!--<h5>Third slide label</h5>-->
+                            <p>Deliciosas empanadas criollas hechas en el horno de barro.</p>
+                        </div>
                     </div>
-                </div>
-                    <div class="carousel-item">
-                        <img src="./img/flan1.png" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                    </div>
-                </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
                     data-bs-slide="prev">
@@ -83,9 +111,15 @@
                 </button>
             </div>
         </section>
- 
-        <section class="servicios"><!--servicios con título arriba-->
+        <!--SECCIÓN PRESENTACIÓN-->
+        <section class="presentacion">
             <h2>Animate a vivir una experiencia culinaria en Argentina</h2>
+            <p>Abrimos las puertas de nuestro hogar para que seas protagonista de un encuentro gastronómico único. Cociná recetas tradicionales de Latinoamérica, descubrí sus historias y disfrutá de cada sabor. También podés relajarte y venir a disfrutar de una cena preparada especialmente para vos.</p>
+            <img src="./img/dani.png" alt="dani">
+        </section>
+        <!--SECCIÓN SERVICIOS-->
+        <section class="servicios">
+            <h2>Conocé nuestra propuesta</h2>
             <div class="servicios_contenedor">
                 <div>
                     <img src="./img/clase2.png" alt="">
@@ -99,29 +133,49 @@
                 </div>
             </div>
         </section>     
-        
-        <section class="consultas"> <!--enlazar a la seccion especifica dentro de la page Consultas-->
-            <ul>
-                <li><a href="./pages/consultas.html">Preguntas frecuentes</a></li>
-                <li><a href="./pages/consultas.html">Política de cancelación</a></li>
-                <li><a href="./pages/consultas.html">Opiniones de clientes</a></li>
-            </ul>
-        </section>
     </main>
-    <footer class="footer"> <!--datos de contacto--> 
+        <!--FOOTER-->
+    <footer class="footer">
+        <!-- Frase superior -->
         <div class="footer-frase">
             <p>“Cociná, compartí y disfrutá sabores auténticos”</p>
         </div>
+    
+        <!-- Info general -->
         <div class="footer-info">
+            <div class="footer-contenido">
+                <!-- Navegación -->
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./pages/clases.html">Clases de cocina</a></li>
+                        <li><a href="./pages/cenas.html">Cenas caseras</a></li>
+                    </ul>
+                </nav>
+    
+                <!-- Botones de consultas -->
+                <div class="footer-consultas">
+                    <ul>
+                        <li><a href="./pages/consultas.html">Preguntas frecuentes</a></li>
+                        <li><a href="./pages/consultas.html">Políticas de cancelación</a></li>
+                        <li><a href="./pages/consultas.html">Opiniones</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Redes sociales -->
             <p>Contactate con nosotros y seguinos en las redes</p>
             <div class="redes">
-                <a href="#"><i class="bi bi-whatsapp"></i>
-                <a href="#"><i class="bi bi-instagram"></i>
-                <a href="#"><i class="bi bi-facebook"></i>
+                <a href="#"><i class="bi bi-whatsapp"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
             </div>
+            
+            <!-- Copy -->
             <p class="copy">© 2025 Clases de Cocina</p>
         </div>
     </footer>
+
     <!--SCRIPT DE BOOTSTRAP-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>

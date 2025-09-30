@@ -11,25 +11,59 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <img class="logo" src="../img/logo1.png" alt="">
-        <nav class="barranavegacion"> <!--barra de navegación-->
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../pages/clases.html">Clases de cocina</a></li>
-                <li><a href="../pages/cenas.html">Cenas como en casa</a></li>
-                <li><a href="../pages/consultas.html">Consultas</a></li>
-            </ul>
-        </nav>
-        <nav class="botonesidiomas"> <!--botones de idiomas-->
-            <ul>
-                <li><a href="../index.html"><img src="../img/bandera_argentina.png" alt="espanol"></a></li>
-                <li><a href="../pages/home.html"><img src="../img/bandera_granbretana.jpg" alt="ingles"></a></li>
-            </ul>
-        </nav>
+    <header>        
+        <!-- NAVBAR PERSONALIZADO CON BOOTSTRAP -->
+        <nav class="navbar navbar-expand-lg fixed-top"> <!--fixed-top para que quede fijo al hacer scroll-->
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../img/logo1.png" alt="logo" class="logo">
+                </a>
+        
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <!-- Contenido del navbar -->
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./clases.html">Clases de cocina</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./cenas.html">Cenas caseras</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Consultas
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./consultas.html">Preguntas frecuentes</a></li>
+                                <li><a class="dropdown-item" href="./consultas.html">Política de cancelación</a></li>
+                                <li><a class="dropdown-item" href="./consultas.html">Opiniones</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+        
+                    <!-- Botones de idiomas -->
+                    <ul class="navbar-nav idiomas">
+                        <li class="nav-item">
+                            <a href="../index.html"><img src="../img/bandera_argentina.png" alt="espanol"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/home.html"><img src="../img/bandera_granbretana.jpg" alt="ingles"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>  
     </header>
     <main>
-        <section class="galeria_imagenes_bootstrap"> <!--CARRUSEL DE BOOTSTRAP-->
+        <!--CARRUSEL de BOOTSTRAP-->
+        <section class="galeria_imagenes_bootstrap">
             <div id="carouselExampleCaptions" class="carousel slide">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -38,35 +72,27 @@
                         aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
                         aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
-                        aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
-                        aria-label="Slide 5"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="../img/asado1.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/asador.png" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="../img/clase1.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="../img/empanadas2.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/flan1.png" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
                         </div>
                     </div>
                 </div>
@@ -83,45 +109,114 @@
             </div>
         </section>
       
-        <section class="servicios"><!--servicios-->
-            <h1>XXXXXX</h1>
-            <h2>Disfrutá de una cena como en casa</h2>
-           
-            <h3>¿De qué se trata esta propuesta</h3>
-            <p>Descripción general. Quiénes somos. Servicios incluídos. Menú.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, pariatur doloribus natus, tempore aliquam repellat explicabo eligendi laborum porro voluptas, rem sint eius quisquam veniam harum. Dolore quis error natus.</p>
-            
-            <h3>¿Quiénes pueden participar?</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui natus incidunt impedit, numquam commodi velit dolores inventore id in recusandae autem aliquam veritatis assumenda laborum voluptas soluta omnis eius. Aperiam.</p>
-            
-            <h3>¿Dónde queda?</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26288.940334382925!2d-58.47121920000001!3d-34.550579199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1755290960595!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            
-            <h3>¿Qué fechas hay disponibles?</h3> <!--agregar ícono de un calendario--->
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque a, dolores similique nemo accusantium facere!</p>
+        <div class="cenas_contenedor">
+                        <!-- FILA 1 -->
+                        <div class="propuestas_cenas">
+                            <h3>¿De qué se tratan nuestras cenas caseras?</h3>
+                            <p>Somos una familia argentina-colombiana que te invita a vivir una experiencia culinaria auténtica, pero esta vez desde el placer de sentarte a disfrutar de una cena especialmente preparada para vos.</p> 
+                            <p>Más que una clase, es un encuentro cultural en un ambiente cálido y cercano, donde compartir la mesa se convierte en una manera de conocer nuestra identidad y llevarte un recuerdo único de tu viaje.</p>
+                        </div>
+                        <div class="participantes_cenas">
+                            <h3>¿Quiénes pueden participar?</h3>
+                            <p>Nuestras cenas están pensadas para todos: viajeros curiosos, amantes de la gastronomía y quienes simplemente disfrutan de comer bien en un ambiente hogareño. Podés venir solo, en pareja, con amigos o en familia. Lo importante es tener ganas de probar sabores auténticos, compartir una experiencia especial y disfrutar de una velada única.</p>
+                        </div>
+                        <!-- FILA 2 -->
+                        <div class="fechas_cenas">
+                            <h3>¿Qué fechas hay disponibles?</h3>
+                            <p>Las cenas se ofrecen los viernes de 20 a 23.30 hs.. Consultá el calendario para conocer las fechas disponibles.</p>
+                        </div>
+                        <div class="costos_cenas">
+                            <h3>¿Qué costo tiene?</h3>
+                            <p>Cada cena cuesta U$S 60 por persona. Incluye entrada, plato principal, postre y una copa de vino.</p>
+                        </div>
+                        <div class="menu_cenas">
+                            <h3>Nuestros menús</h3>
+                            <p>Menú 1: Picada de quesos y fiambres + empanadas + asado + ensalada y papas fritas + flan casero o budín de pan o brownie.</p>
+                            <p>Menú 2: Comida mexicana: quesadillas varias + fajitas para rellenar + flan casero o budín de pan o brownie.</p>
+                        </div>
+                        <!-- FILA 3 -->
+                        <div class="form_cenas"> <!-- CAJA FORMULARIO -->
+                            <h3>Inscribite y te confirmamos la reserva</h3>
+                            <p>Completá el formulario de inscripción y nos pondremos en contacto para confirmar tu lugar. ¡Es fácil y rápido!</p>
 
-            <h3>¿Qué costo tiene?</h3> <!--agregar ícono de dinero--->
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos libero enim quo, ullam harum autem.</p>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="correo" class="form-label">Correo electrónico</label>
+                                    <input type="email" class="form-control" id="correo">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="nombre" class="form-label">Nombre y apellido</label>
+                                    <input type="text" class="form-control" id="nombre">
+                                </div>
+                            </div>
 
-            <h3>Inscribite a través del siguiente formulario</h3> <!--achicar el tamaña del formulario--->
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, fuga dolores aperiam cumque suscipit nulla.</p>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf2OOTwA-dPOf57l84onBoipZPIoMHNVmU9ypdl_KZJVCU6PQ/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="telefono" class="form-label">Teléfono</label>
+                                    <input type="tel" class="form-control" id="telefono">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="cantidad" class="form-label">Cantidad de personas</label>
+                                    <input type="number" class="form-control" id="cantidad">
+                                </div>
+                            </div>
 
-            
-        </section>
+                            <!-- Botón -->
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-inscripcion">Enviar inscripción</button>
+                            </div>
+                        </div>
+                        <div class="mapa_cenas">
+                            <h3>¿Dónde estamos ubicados?</h3>
+                            <p>Nuestras cenas se ofrecen en nuestro hogar, en el barrio de Núñez, en la Ciudad de Buenos Aires. Al confirmar tu reserva, te damos todos los detalles.</p>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26288.940334382925!2d-58.47121920000001!3d-34.550579199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1755290960595!5m2!1ses!2sar"
+                                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </section>
+            </section>
     </main>
     
-    <footer class="footer"> <!--DATOS DE CONTACTO-->
+    <!--FOOTER-->
+        <footer class="footer">
+            <!-- Frase superior -->
             <div class="footer-frase">
                 <p>“Cociná, compartí y disfrutá sabores auténticos”</p>
             </div>
+        
+            <!-- Info general -->
             <div class="footer-info">
+                <div class="footer-contenido">
+                    <!-- Navegación -->
+                    <nav class="footer-nav">
+                        <ul>
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="../pages/clases.html">Clases de cocina</a></li>
+                            <li><a href="../pages/cenas.html">Cenas caseras</a></li>
+                        </ul>
+                    </nav>
+        
+                    <!-- Botones de consultas -->
+                    <div class="footer-consultas">
+                        <ul>
+                            <li><a href="../pages/consultas.html">Preguntas frecuentes</a></li>
+                            <li><a href="../pages/consultas.html">Políticas de cancelación</a></li>
+                            <li><a href="../pages/consultas.html">Opiniones</a></li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Redes sociales -->
                 <p>Contactate con nosotros y seguinos en las redes</p>
                 <div class="redes">
-                    <a href="#"><i class="bi bi-whatsapp"></i>
-                        <a href="#"><i class="bi bi-instagram"></i>
-                            <a href="#"><i class="bi bi-facebook"></i>
+                    <a href="#"><i class="bi bi-whatsapp"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
                 </div>
+        
+                <!-- Copy -->
                 <p class="copy">© 2025 Clases de Cocina</p>
             </div>
         </footer>
