@@ -121,6 +121,7 @@ body {
 /* --INDEX --- SECCIÓN PRESENTACIÓN--*/
 
 .presentacion {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -129,18 +130,21 @@ body {
     flex-wrap: wrap;
     padding: 20px;
     margin-top: 10px;
-    gap: 15px;
     background-color: var(--beige);
     border-top: 2px solid var(--terracota);
     border-bottom: 2px solid var(--terracota);
 }
 .presentacion h2 {
+    width: 100%;
     font-style: italic;
-    color: var(--petroleo);
+    color: var(--beige);
     font-size: 32px;
     font-weight: bolder;
     text-align: center;
     padding: 20px;
+    margin: 20px 0;
+    background-color: var(--petroleo);
+    border-bottom: 2px solid var(--terracota);
 }
 .presentacion p {
     font-size: 16px;
@@ -152,10 +156,10 @@ body {
 .presentacion img {
     width: 300px;
     height: 300px;
-    /*border-radius: 50%; */
-    object-fit: cover;
+    border-radius: 5px;
     border: 3px solid var(--petroleo);
-    margin-right: 20px
+    margin-right: 20px;
+    object-fit: cover;
 }
 /*---INDEX - SECCIÓN SERVICIOS---*/
 
@@ -237,24 +241,23 @@ body {
 }
 
 .clases_contenedor_gral h1 {
+    width: 100%;
     font-style: italic;
-    color: var(--petroleo);
-    font-size: 35px;
+    color: var(--beige);
+    font-size: 32px;
     font-weight: bolder;
     text-align: center;
     padding: 20px;
-    background-color: var(--terracota);
-    border-radius: 6px;
+    margin: 20px 0;
+    background-color: var(--petroleo);
+    border-bottom: 2px solid var(--terracota);
 }
-
-.videos_clases {
-    margin: 40px auto;
-    text-align: center;
-    background: #f5f5f5;
-    padding: 30px 20px;
-    border-radius: 10px;
+.clases_contenedor_gral p{
+    font-size: 16px;
+    color: var(--petroleo);
+    font-weight: bold;
+    padding-left: 20px
 }
-
 .videos_contenedor {
     display: flex;
     justify-content: center;
@@ -266,7 +269,6 @@ body {
     width: 400px;
     height: 250px;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
 .clases_cocina h2 {
@@ -306,8 +308,7 @@ body {
 .clases_cocina_contenedor div {
     background-color: #eeeeee;
     border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    padding: 15px;    
 }
 
 .clases_cocina_contenedor iframe {
@@ -315,7 +316,6 @@ body {
     min-height: 250px;
     /*---altura mínima---*/
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
     object-fit: cover;
 }
 
@@ -349,7 +349,6 @@ body {
     padding: 10px;
     border-radius: 10px;
     background-color: #eeeeee;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 .mapa {
@@ -384,7 +383,7 @@ body {
 /*---BOTÓN---*/
 .btn-inscripcion {
     background-color: var(--terracota);
-    color: white;
+    color: var(--beige);
     font-weight: bold;
     border: none;
     border-radius: 6px;
@@ -398,6 +397,30 @@ body {
 }
 
 /*--PÁGINA CENAS - GRILLA CON INFO DE CENAS - CONTENEDOR GRID----*/
+.cenas_contenedor_gral {
+    background-color: #fdfaf5;
+    padding: 20px;
+}
+
+.cenas_contenedor_gral h2 {
+    width: 100%;
+    font-style: italic;
+    color: var(--beige);
+    font-size: 32px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: var(--petroleo);
+    border-bottom: 2px solid var(--terracota);
+}
+.clases_contenedor_gral p{
+    font-size: 16px;
+    color: var(--petroleo);
+    font-weight: bold;
+    padding-left: 20px;
+    text-align: center;
+}
 .cenas_contenedor {
     margin: 5px;
     display: grid;
@@ -411,7 +434,6 @@ body {
     background-color: #eeeeee;
     border-radius: 10px;
     padding: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 .cenas_contenedor iframe {
@@ -419,10 +441,23 @@ body {
     min-height: 250px;
     /*---altura mínima---*/
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
     object-fit: cover;
 }
 
+.cenas_contenedor h3 {
+    color: var(--petroleo);
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.cenas_contenedor p {
+    color: var(--petroleo);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
 /*---FILA 1---*/
 .propuestas_cenas {
     grid-column: span 2;
@@ -453,7 +488,6 @@ body {
     padding: 10px;
     border-radius: 10px;
     background-color: #eeeeee;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 .mapa_cenas {
@@ -488,7 +522,7 @@ body {
 /*---BOTÓN---*/
 .btn-inscripcion {
     background-color: var(--terracota);
-    color: white;
+    color: var(--beige);
     font-weight: bold;
     border: none;
     border-radius: 6px;
@@ -544,6 +578,31 @@ body {
     margin: 10px 0;
 }
 
+.accordion-button {
+    background-color: var(--petroleo);
+    color: var(--beige);
+    font-weight: bold;
+    font-style: italic;
+    border: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--terracota);
+    color: var(--beige);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 5px var(--menta);
+}
+
+.accordion-body {
+    background-color: var(--beige);
+    color: var(--petroleo);
+    font-size: 16px;
+    font-style: italic;
+    border-left: 3px solid var(--terracota);
+}
 
 /* ------------------------------
    Sección Opiniones / Testimonios
@@ -579,11 +638,11 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--terracota);
+    background-color: #ff914d;
     border: 2px solid var(--petroleo);
     border-radius: 10px;
     width: 200px;
-    height: 250px;
+    height: 200px;
     padding: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -740,210 +799,141 @@ body {
 
 /*----RESPONSIVE DESIGN----*/
 
-@media sreeen and (max-width: 1024px) {
+/* ---------------------------
+   RESPONSIVE DESIGN
+----------------------------*/
 
-    /*---HEADER---*/
-    header {
+/* ---------------------------
+   RESPONSIVE DESIGN COMPLETO
+----------------------------*/
+
+/* --- TABLETS Y PANTALLAS MEDIANAS (≤1024px) --- */
+@media screen and (max-width: 1024px) {
+    /* Navbar */
+    .navbar .logo {
+        height: 70px;
+    }
+
+    /* Presentación en columna */
+    .presentacion {
         flex-direction: column;
-        height: auto;
-        padding: 20px 10px;
         text-align: center;
     }
-
-    .logo {
-        margin-bottom: 20px;
+    .presentacion p, 
+    .presentacion img {
+        width: 100%;
     }
 
-    /*---INDEX - SECCIÓN SERVICIOS---*/
-    .servicios_contenedor {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .servicios .servicios_contenedor div {
-        width: 80%;
-    }
-
-    .consultas ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .consultas ul li a {
-        width: 250px;
-        text-align: center;
-    }
-
-    /*!---PÁGINA CLASES - SECCIÓN CLASES DE COCINA---*/
-
-    .videos_contenedor {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .videos_contenedor iframe {
-        width: 90%;
-        height: 300px;
-    }
-
-    .clases_cocina_contenedor {
+    /* Grillas en 2 columnas */
+    .clases_cocina_contenedor,
+    .cenas_contenedor {
         grid-template-columns: 1fr 1fr;
     }
 
-    .propuestas_clases {
+    /* Formularios y mapas ancho completo */
+    .form_clases, .mapa,
+    .form_cenas, .mapa_cenas {
         grid-column: span 2;
+        width: 100%;
     }
 
-    .form_clases {
-        grid-column: span 2;
-    }
-
-    .mapa {
-        grid-column: span 2;
+    /* Footer más aireado */
+    .footer-contenido {
+        gap: 20px;
     }
 }
 
-@media screen and (max-width: 767px) {
-
-    /*----HEADER----*/
-    header {
-        flex-direction: column;
-        height: auto;
-        padding: 20px 10px;
-        text-align: center;
+/* --- CELULARES GRANDES (≤768px) --- */
+@media screen and (max-width: 768px) {
+    /* Encabezados */
+    .titulo-seccion {
+        font-size: 1.6rem;
+        padding: 15px;
     }
 
-    .logo {
-        height: 120px;
-        width: 120px;
-        margin-bottom: 20px;
+    /* Carrusel */
+    .carousel-item img {
+        height: 180px;
     }
 
-    .barranavegacion ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .botonesidiomas ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .barranavegacion a {
-        display: block;
-        text-align: center;
-    }
-
-    .botonesidiomas img {
-        margin: 0;
-    }
-
-    /*!-----MAIN------*/
-
-    /*!---CARRUSEL DE BOOTSTRAP----*/
-
-    .d-block.w-100 {
-        height: 200px;
-    }
-
-    /*---INDEX - SECCIÓN SERVICIOS---*/
-    .servicios h2 {
-        font-size: 24px;
-        padding: 10px;
-    }
-
+    /* Servicios en columna */
     .servicios_contenedor {
         flex-direction: column;
         align-items: center;
     }
-
-    .servicios .servicios_contenedor div {
+    .servicios_contenedor div {
         width: 90%;
     }
 
-    .servicios div img {
-        height: 200px;
-    }
-
-    .consultas {
-        height: auto;
-        margin-top: 10px;
-        padding: 10px;
-    }
-
-    .consultas ul {
-        flex-direction: column;
-        gap: 10px;
-        padding: 5px;
-    }
-
-    .consultas ul li a {
-        display: block;
-        text-align: center;
-    }
-
-    /*!---PÁGINA CLASES - SECCIÓN CLASES DE COCINA---*/
-
-    .clases_contenedor_gral h1 {
-        font-size: 28px;
-        padding: 15px;
-    }
-
-    .videos_contenedor {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .videos_contenedor iframe {
-        width: 100%;
-        height: 200px;
-    }
-
-    .clases_cocina h2 {
-        font-size: 24px;
-        padding: 10px;
-    }
-
-    .clases_cocina_contenedor {
+    /* Grillas en 1 columna */
+    .clases_cocina_contenedor,
+    .cenas_contenedor {
         grid-template-columns: 1fr;
     }
 
-    .propuestas_clase {
+    /* Formularios y mapas uno debajo del otro */
+    .form_clases, .mapa,
+    .form_cenas, .mapa_cenas {
         grid-column: span 1;
+        width: 100%;
     }
 
-    .participantes_clases {
-        grid-column: span 1;
+    iframe {
+        width: 100%;
+        height: 220px;
     }
 
-    .fechas_clases {
-        grid-column: span 1;
+    /* Testimonios en columna */
+    .tarjeta {
+        width: 100%;
     }
 
-    .costos_clases {
-        grid-column: span 1;
-    }
-
-    .menu {
-        grid-column: span 1;
-    }
-
-    .form_clases {
-        grid-column: span 1;
-    }
-
-    .mapa {
-        grid-column: span 1;
-    }
-
-    .mapa iframe {
-        min-height: 200px;
-    }
-
-    /*---FOOTER---*/
-
-    .footer-frase {
-        font-size: 16px;
-        padding: 20px 10px;
+    /* Footer en stack */
+    .footer-contenido {
+        flex-direction: column;
+        align-items: center;
     }
 }
+
+/* --- CELULARES CHICOS (≤480px) --- */
+@media screen and (max-width: 480px) {
+    /* Ajustes presentación */
+    .presentacion img {
+        height: 200px;
+    }
+    .presentacion p {
+        font-size: 0.9rem;
+    }
+
+    /* Servicios full width */
+    .servicios_contenedor div {
+        width: 100%;
+    }
+
+    /* Carrusel más compacto */
+    .carousel-item img {
+        height: 150px;
+    }
+
+    /* Iframes más pequeños */
+    iframe {
+        min-height: 180px;
+    }
+
+    /* Espaciado general más compacto */
+    section {
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    /* Footer compacto */
+    .footer-frase {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+    .footer-info {
+        font-size: 0.8rem;
+        padding: 15px;
+    }
+}
+
