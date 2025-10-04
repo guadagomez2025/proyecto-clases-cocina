@@ -1,10 +1,15 @@
+@use "../base/generales" as gen;
+@use "../base//variables" as var;
+@use "../base/mixin" as mix;
+@use "../base/mediaquerys" as mq;
+
 /* Para que el contenido no quede tapado por el navbar fijo */
 body {
 padding-top: 140px; /* ajustá según la altura de tu navbar/logo */
     .navbar {
     height: 120px;
-    background-color: $beige !important;
-    border-bottom: 2px solid $terracota;
+    background-color: var.$beige !important;
+    border-bottom: 2px solid var.$terracota;
     padding: 10px 30px;
         .navbar-brand{
             img{
@@ -19,27 +24,27 @@ padding-top: 140px; /* ajustá según la altura de tu navbar/logo */
         } 
         .nav-link{
         text-decoration: none;
-        color: $beige;
+        color: var.$beige;
         font-size: 16px;
         font-weight: bold;
-        background-color: $terracota;
+        background-color: var.$terracota;
         padding: 10px 15px;
         border-radius: 6px;
         margin: 0 5px;
         transition: background 0.3s;
         &:hover{
-        background-color: $petroleo;
-        color: $beige;
+        background-color: var.$petroleo;
+        color: var.$beige;
         }
         &:active{
-        background-color: $petroleo !important;
-        color: $beige !important;
+        background-color: var.$petroleo !important;
+        color: var.$beige !important;
         }    
         } 
         .idiomas{
             img{
             height: 35px;
-            border: 2px solid $petroleo;
+            border: 2px solid var.$petroleo;
             border-radius: 4px;
             margin: 5px;
             transition: transform 0.3s ease;
@@ -49,7 +54,7 @@ padding-top: 140px; /* ajustá según la altura de tu navbar/logo */
             }
             a{
             &.active img{
-            background-color: $petroleo; /* fondo oscuro */
+            background-color: var.$petroleo; /* fondo oscuro */
             padding: 3px; /* espacio para que el fondo se vea */
             border-radius: 6px;
             }    
@@ -58,14 +63,14 @@ padding-top: 140px; /* ajustá según la altura de tu navbar/logo */
         }       
     }
     .dropdown-menu{
-    background-color: $beige;
-    border: 2px solid $petroleo;
+    background-color: var.$beige;
+    border: 2px solid var.$petroleo;
         .dropdown-item {
-        color: $petroleo;
+        color: var.$petroleo;
         font-weight: bold;
         &:hover{
-        background-color: $terracota;
-        color: $beige;    
+        background-color: var.$terracota;
+        color: var.$beige;    
         }
         }
     }

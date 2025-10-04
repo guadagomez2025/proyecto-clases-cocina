@@ -1,3 +1,9 @@
+@use "../base/generales" as gen;
+@use "../base//variables" as var;
+@use "../base/mixin" as mix;
+@use "../base/mediaquerys" as mq;
+
+
 /*   CARRUSEL   */
 
 .d-block.w-100 {
@@ -8,31 +14,31 @@ margin-top: 10px;
 }
 
 .presentacion {
-  @include flex-center;
+  @include mix.flex-center;
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 10px;
-  background-color: $beige;
-  border-bottom: 2px solid $terracota;
+  background-color: var.$beige;
+  border-bottom: 2px solid var.$terracota;
   padding-bottom: 20px;
 
     h2 {
     width: 100%;
     font-style: italic;
-    color: $beige;
+    color: var.$beige;
     font-size: 32px;
     font-weight: bolder;
     text-align: center;
     padding: 20px;
     margin: 20px 0;
-    background-color: $petroleo;
-    border-bottom: 2px solid $terracota;
+    background-color: var.$petroleo;
+    border-bottom: 2px solid var.$terracota;
     }
 
     p {
     font-size: 16px;
     width: 50%;
-    color: $petroleo;
+    color: var.$petroleo;
     font-weight: bold;
     padding-left: 20px;
     }
@@ -41,7 +47,7 @@ margin-top: 10px;
     width: 300px;
     height: 300px;
     border-radius: 5px;
-    border: 3px solid $petroleo;
+    border: 3px solid var.$petroleo;
     margin-right: 20px;
     object-fit: cover;
     }
@@ -51,12 +57,12 @@ margin-top: 10px;
 padding: 20px;
 margin-top: 10px;
 gap: 15px;
-background-color: $beige;
-border-bottom: 2px solid $terracota;
+background-color: var.$beige;
+border-bottom: 2px solid var.$terracota;
 
     h2 {
     font-style: italic;
-    color: $petroleo;
+    color: var.$petroleo;
     font-size: 32px;
     font-weight: bolder;
     text-align: center;
@@ -76,8 +82,8 @@ border-bottom: 2px solid $terracota;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        background-color: $terracota;
-        border: 2px solid $petroleo;
+        background-color: var.$terracota;
+        border: 2px solid var.$petroleo;
         border-radius: 10px;
         width: 280px;
         height: 380px;
@@ -94,14 +100,14 @@ border-bottom: 2px solid $terracota;
         }
 
         h3 {
-        color: $petroleo;
+        color: var.$petroleo;
         font-size: 20px;
         font-weight: bolder;
         margin: 10px 0;
         }
 
         a {
-        background: $petroleo;
+        background: var.$petroleo;
         color: white;
         text-decoration: none;
         padding: 8px 12px;
@@ -109,7 +115,7 @@ border-bottom: 2px solid $terracota;
         font-size: 16px;
         transition: background 0.3s;
         &:hover {
-        background-color: $menta;
+        background-color: var.$menta;
         }
         }
     }
@@ -118,23 +124,23 @@ border-bottom: 2px solid $terracota;
 /*!---PÁGINA CLASES Y CENAS ---*/
 
 .clases_contenedor_gral {
-background-color: $beige;
+background-color: var.$beige;
 padding: 20px;
     h1{
     width: 100%;
     font-style: italic;
-    color: $beige;
+    color: var.$beige;
     font-size: 32px;
     font-weight: bolder;
     text-align: center;
     padding: 20px;
     margin: 20px 0;
-    background-color: $petroleo;
-    border-bottom: 2px solid $terracota;
+    background-color: var.$petroleo;
+    border-bottom: 2px solid var.$terracota;
     }
     p{
     font-size: 16px;
-    color: $petroleo;
+    color: var.$petroleo;
     font-weight: bold;
     text-align: center;   
     padding: 0 20px;      /* opcional: padding lateral en lugar de solo a la izquierda */
@@ -144,7 +150,7 @@ padding: 20px;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    border-bottom: 2px solid %terracota;
+    border-bottom: 2px solid var.$terracota;
     padding-bottom: 20px;
         iframe {
         width: 400px;
@@ -155,7 +161,7 @@ padding: 20px;
     .grilla{
         h2{
         font-style: italic;
-        color: $petroleo;
+        color: var.$petroleo;
         font-size: 32px;
         font-weight: bolder;
         text-align: center;
@@ -180,14 +186,14 @@ padding: 20px;
             object-fit: cover;
             }
             h3{
-            color: $petroleo;
+            color: var.$petroleo;
             font-size: 20px;
             font-weight: bolder;
             margin-bottom: 10px;
             text-align: center;   
             }
             p{
-            color: $petroleo;
+            color: var.$petroleo;
             font-size: 14px !important;
             line-height: 1.5;
             margin-bottom: 10px;
@@ -235,15 +241,15 @@ padding: 20px;
                 .d-grid{
                     .btn{
                         .btn-inscripcion{
-                        background-color: $terracota;
-                        color: $beige;
+                        background-color: var.$terracota;
+                        color: var.$beige;
                         font-weight: bold;
                         border: none;
                         border-radius: 6px;
                         padding: 10px;
                         transition: background-color 0.3s ease, transform 0.2s ease;
                         &:hover{
-                        background-color: $petroleo;
+                        background-color: var.$petroleo;
                         transform: scale(1.05);
                         }
                     }
@@ -267,18 +273,18 @@ margin-top: 10px;
     h2{
     width: 100%;
     font-style: italic;
-    color: $beige;
+    color: var.$beige;
     font-size: 32px;
     font-weight: bolder;
     text-align: center;
     padding: 20px;
     margin: 20px 0;
-    background-color: $petroleo;
-    border-bottom: 2px solid $terracota;
+    background-color: var.$petroleo;
+    border-bottom: 2px solid var.$terracota;
     }
     p{
     font-size: 16px;
-    color: $petroleo;
+    color: var.$petroleo;
     font-weight: bold;
     padding-left: 20px;
     text-align: center;

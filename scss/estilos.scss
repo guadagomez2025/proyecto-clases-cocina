@@ -1,5 +1,13 @@
 /* ---- ARCHIVO PRINICIAL DE SCSS ----*/
 
+@use "./base/variables";
+@use "./base/mixin";
+@use "./base/generales";
+@use "./base/mediaquerys";
 
-@use "./base" as *;
-@use "./components" as *;
+@use "./components/header";
+@use "./components/main";
+@use "./components/footer";
+
+
+
