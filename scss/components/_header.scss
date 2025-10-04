@@ -12,14 +12,11 @@ padding-top: 140px; /* ajustá según la altura de tu navbar/logo */
     border-bottom: 2px solid var.$terracota;
     padding: 10px 30px;
         .navbar-brand{
-            img{
-                .logo {
-                height: 100px;
-                width: 100px;
-                border-radius: 5px;
-                display: block;
-                }
-                
+            .logo {
+            height: 100px;
+            width: 100px;
+            border-radius: 5px;
+            display: block;
             }
         } 
         .nav-link{

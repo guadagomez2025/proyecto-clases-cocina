@@ -37,7 +37,7 @@ body .navbar {
   border-bottom: 2px solid #e1641e;
   padding: 10px 30px;
 }
-body .navbar .navbar-brand img .logo {
+body .navbar .navbar-brand .logo {
   height: 100px;
   width: 100px;
   border-radius: 5px;
