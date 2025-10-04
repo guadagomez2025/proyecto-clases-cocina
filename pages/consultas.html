@@ -8,6 +8,8 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <!--LINK A SASS-CSS-->
+    <!-- <link rel="stylesheet" href="./css/estilos.css">-->
     <title>Document</title>
 </head>
 <body>
@@ -106,57 +108,59 @@
             </div>
         </section>
         <main>
-            <h1 class="titulo" id="faq">¿Querés conocer más acerca de nosotros?</h1>
-            <section class="preguntas-frecuentes">
-                <h2>Preguntas frecuentes</h2>
-                <p>Tenés alguna duda, consultá nuestras preguntas frecuentes</p>
-    
-                <!--ACORDEÓN DE PREGUNTAS FRECUENTES - BOOTSTRAP-->
-                <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                ¿Puedo elegir qué menú quiero para la cena?
-                            </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                            data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Sí, ofrecemos dos menús que se van alternando. Al hacer tu reserva,
-                                te contamos cuál estará disponible y podés consultarnos sobre posibles adaptaciones por
-                                alergias o preferencias.</div>
+            <section class="consultas_contenedor">
+                <h1 class="titulo" id="faq">¿Querés conocer más acerca de nosotros?</h1>
+                <section class="preguntas-frecuentes">
+                    <h2>Preguntas frecuentes</h2>
+                    <p>Tenés alguna duda, consultá nuestras preguntas frecuentes</p>
+        
+                    <!--ACORDEÓN DE PREGUNTAS FRECUENTES - BOOTSTRAP-->
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                    ¿Puedo elegir qué menú quiero para la cena?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Sí, ofrecemos dos menús que se van alternando. Al hacer tu reserva,
+                                    te contamos cuál estará disponible y podés consultarnos sobre posibles adaptaciones por
+                                    alergias o preferencias.</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                ¿Pueden asistir menores de edad?
-                            </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                            data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">No, nuestras cenas están pensadas exclusivamente para mayores de 18
-                                años.</div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    ¿Pueden asistir menores de edad?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">No, nuestras cenas están pensadas exclusivamente para mayores de 18
+                                    años.</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                aria-controls="flush-collapseThree">
-                                ¿Necesito tener experiencia en cocina para participar?
-                            </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse"
-                            data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">No, no hace falta saber cocinar. Las cenas están pensadas para que
-                                disfrutes de la comida y la compañía en un ambiente hogareño, sin presiones ni
-                                complicaciones.
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    ¿Necesito tener experiencia en cocina para participar?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">No, no hace falta saber cocinar. Las cenas están pensadas para que
+                                    disfrutes de la comida y la compañía en un ambiente hogareño, sin presiones ni
+                                    complicaciones.
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </section>
             
             <!--TESTIMONIOS Y OPINIONES-->
@@ -180,15 +184,17 @@
             
             <!--POLITICA DE CANCELACIÓN-->
             <section class="politica_cancelacion" id="cancelacion">
-                    <h2>Nuestra política de cancelación</h2>
-                    <ul>
-                        <li>Cancelaciones hasta <strong>48 horas antes</strong>: reembolso completo.</li>
-                        <li>Cancelaciones dentro de las <strong>48 horas previas</strong> o no presentarse: <strong>50% del
-                                valor</strong> de la reserva.</li>
-                        <li>Cambios de fecha: consultar con anticipación; haremos nuestro mejor esfuerzo.</li>
-                    </ul>
+                <h2>Nuestra política de cancelación</h2>
+                <ul>
+                    <li><i class="bi bi-check-circle-fill"></i> Cancelaciones hasta <strong>48 horas antes</strong>: reembolso
+                        completo.</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Cancelaciones dentro de las <strong>48 horas previas</strong> o no
+                        presentarse: <strong>50% del valor</strong> de la reserva.</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Cambios de fecha: consultar con anticipación; haremos nuestro mejor
+                        esfuerzo.</li>
+                </ul>
             </section>
-    </main>
+            </main>
     <!--FOOTER-->
         <footer class="footer">
             <!-- Frase superior -->
@@ -211,9 +217,9 @@
                     <!-- Botones de consultas -->
                     <div class="footer-consultas">
                         <ul>
-                            <li><a href="../pages/consultas.html">Preguntas frecuentes</a></li>
-                            <li><a href="../pages/consultas.html">Políticas de cancelación</a></li>
-                            <li><a href="../pages/consultas.html">Opiniones</a></li>
+                            <li><a href="../pages/consultas.html#faq">Preguntas frecuentes</a></li>
+                            <li><a href="../pages/consultas.html#cancelacion">Políticas de cancelación</a></li>
+                            <li><a href="../pages/consultas.html#opiniones">Opiniones</a></li>
                         </ul>
                     </div>
                 </div>

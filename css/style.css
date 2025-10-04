@@ -76,7 +76,7 @@ body {
 /* Dropdown */
 .dropdown-menu {
   background-color: var(--beige);
-  border: 2px solid var(--menta);
+  border: 2px solid var(--petroleo);
 }
 
 .dropdown-item {
@@ -128,11 +128,10 @@ body {
     justify-content: space-evenly;
     text-align: left;
     flex-wrap: wrap;
-    padding: 20px;
     margin-top: 10px;
     background-color: var(--beige);
-    border-top: 2px solid var(--terracota);
     border-bottom: 2px solid var(--terracota);
+    padding-bottom: 20px;
 }
 .presentacion h2 {
     width: 100%;
@@ -151,7 +150,7 @@ body {
     width: 50%;
     color: var(--petroleo);
     font-weight: bold;
-    padding-left: 20px
+    padding-left: 20px;
 }
 .presentacion img {
     width: 300px;
@@ -182,14 +181,13 @@ body {
 .servicios_contenedor {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    /* permite que bajen a otra fila */
+    flex-wrap: wrap;    /* permite que bajen a otra fila */
     gap: 20px;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-.servicios .servicios_contenedor div {
+.servicios_contenedor div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -201,25 +199,21 @@ body {
     height: 380px;
     padding: 10px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
-
-.servicios div h3 {
-    color: var(--petroleo);
-    font-size: 20px;
-    font-weight: bolder;
-    margin: 10px 0;
-}
-
-.servicios div img {
+.servicios_contenedor div img {
     width: 100%px;
     height: 220px;
     object-fit: cover;
     border-radius: 8px;
 }
-
-.servicios div a {
+.servicios_contenedor div h3 {
+    color: var(--petroleo);
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 10px 0;
+}
+.servicios_contenedor div a {
     background: var(--petroleo);
     color: white;
     text-decoration: none;
@@ -229,11 +223,11 @@ body {
     transition: background 0.3s;
 }
 
-.servicios div a:hover {
+.servicios_contenedor div a:hover {
     background-color: var(--menta);
 }
 
-/*!---PÁGINA CLASES - SECCIÓN CLASES DE COCINA---*/
+/*!---PÁGINA CLASES Y CENAS ---*/
 
 .clases_contenedor_gral {
     background-color: #fdfaf5;
@@ -256,13 +250,16 @@ body {
     font-size: 16px;
     color: var(--petroleo);
     font-weight: bold;
-    padding-left: 20px
+    text-align: center;   /* centrado */
+    padding: 0 20px;      /* opcional: padding lateral en lugar de solo a la izquierda */
 }
 .videos_contenedor {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    border-bottom: 2px solid var(--terracota);
+    padding-bottom: 20px;
 }
 
 .videos_contenedor iframe {
@@ -271,7 +268,9 @@ body {
     border-radius: 8px;
 }
 
-.clases_cocina h2 {
+/*!---GRILLA - CONTENEDOR GRID---*/
+
+.grilla h2 {
     font-style: italic;
     color: var(--petroleo);
     font-size: 32px;
@@ -280,23 +279,7 @@ body {
     padding: 20px;
 }
 
-.clases_cocina h3 {
-    color: var(--petroleo);
-    font-size: 20px;
-    font-weight: bolder;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.clases_cocina p {
-    color: var(--petroleo);
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 10px;
-}
-
-/*--PAGINAS CLASES - GRILLA CON INFO DE CLASES - CONTENEDOR GRID----*/
-.clases_cocina_contenedor {
+.grilla_contenedor {
     margin: 5px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -305,13 +288,13 @@ body {
     gap: 15px;
 }
 
-.clases_cocina_contenedor div {
+.grilla_contenedor div {
     background-color: #eeeeee;
     border-radius: 10px;
     padding: 15px;    
 }
 
-.clases_cocina_contenedor iframe {
+.grilla_contenedor iframe {
     width: 100%;
     min-height: 250px;
     /*---altura mínima---*/
@@ -319,21 +302,42 @@ body {
     object-fit: cover;
 }
 
+.grilla_contenedor h3 {
+    color: var(--petroleo);
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.grilla_contenedor p {
+    color: var(--petroleo);
+    font-size: 14px !important;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-weight: normal !important; /* quitar negrita */
+    text-align: left !important;     /* justificado a la izquierda */
+}
+
+.grilla_contenedor p span {
+  font-weight: bold;
+}
+
 /*---FILA 1---*/
-.propuestas_clases {
+.propuestas {
     grid-column: span 2;
 }
 
-.participantes_clases {
+.participantes {
     grid-column: span 1;
 }
 
 /*---FILA 2---*/
-.fechas_clases {
+.fechas {
     grid-column: span 1;
 }
 
-.costos_clases {
+.costos {
     grid-column: span 1;
 }
 
@@ -342,7 +346,7 @@ body {
 }
 
 /*---FILA 3---*/
-.form_clases {
+.form {
     grid-column: span 2;
     display: flex;
     flex-direction: column;
@@ -358,15 +362,6 @@ body {
 }
 
 /*---ESTILOS FORMULARIO---*/
-.formulario_contenedor {
-    width: 100%;
-    border: none;
-    padding: 8px;
-    margin-bottom: 5px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
-
 .mb-3 {
     margin-bottom: 8px;
 }
@@ -414,128 +409,22 @@ body {
     background-color: var(--petroleo);
     border-bottom: 2px solid var(--terracota);
 }
-.clases_contenedor_gral p{
+.cenas_contenedor_gral p{
     font-size: 16px;
     color: var(--petroleo);
     font-weight: bold;
     padding-left: 20px;
     text-align: center;
 }
-.cenas_contenedor {
-    margin: 5px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: auto;
-    /*---cada fila se adapta a su contenido--*/
-    gap: 15px;
-}
 
-.cenas_contenedor div {
-    background-color: #eeeeee;
-    border-radius: 10px;
-    padding: 15px;
-}
-
-.cenas_contenedor iframe {
-    width: 100%;
-    min-height: 250px;
-    /*---altura mínima---*/
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-.cenas_contenedor h3 {
-    color: var(--petroleo);
-    font-size: 20px;
-    font-weight: bolder;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.cenas_contenedor p {
-    color: var(--petroleo);
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 10px;
-}
-/*---FILA 1---*/
-.propuestas_cenas {
-    grid-column: span 2;
-}
-
-.participantes_cenas {
-    grid-column: span 1;
-}
-
-/*---FILA 2---*/
-.fechas_cenas {
-    grid-column: span 1;
-}
-
-.costos_cenas {
-    grid-column: span 1;
-}
-
-.menu_cenas {
-    grid-column: span 1;
-}
-
-/*---FILA 3---*/
-.form_cenas {
-    grid-column: span 2;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #eeeeee;
-}
-
-.mapa_cenas {
-    grid-column: span 1;
-    display: flex;
-    flex-direction: column;
-}
-
-/*---ESTILOS FORMULARIO---*/
-.formulario_contenedor {
-    width: 100%;
-    border: none;
-    padding: 8px;
-    margin-bottom: 5px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
-
-.mb-3 {
-    margin-bottom: 8px;
-}
-
-.mb-3 .form-label {
-    font-size: 13px;
-}
-
-.form-control {
-    padding: 4px 6px;
-    font-size: 14px;
-}
-
-/*---BOTÓN---*/
-.btn-inscripcion {
-    background-color: var(--terracota);
-    color: var(--beige);
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    padding: 10px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-inscripcion:hover {
-    background-color: var(--petroleo);
-    transform: scale(1.05);
-}
 /*!-----PAGINA CONSULTAS------*/
-.titulo{
+.consultas_contenedor{
+    padding: 20px;
+    margin: 20px 0;               /* margen uniforme arriba y abajo */
+    background-color: var(--beige);
+    border-bottom: 2px solid var(--terracota);
+}
+.consultas_contenedor .titulo{
    font-style: italic;
     color: var(--beige);
     font-size: 32px;
@@ -546,7 +435,11 @@ body {
     background-color: var(--petroleo);
     border-bottom: 2px solid var(--terracota);
 }
-
+.preguntas-frecuentes{
+    padding: 20px;
+    margin: 20px 0;               /* margen uniforme arriba y abajo */
+    background-color: var(--beige);
+}
 .preguntas-frecuentes h2{
     font-style: italic;
     color: var(--petroleo);
@@ -571,37 +464,43 @@ body {
 }
 
 .acordeon-body{
-    color: var(--petroleo);
+    color: var(--beige);
     font-size: 16px;
     font-weight: normal;
     font-style: italic;
     margin: 10px 0;
 }
 
+/* Fondo beige para los botones colapsados */
 .accordion-button {
-    background-color: var(--petroleo);
-    color: var(--beige);
+    background-color: var(--petroleo); /* coincide con el fondo de la sección */
+    color: var(--beige);         
     font-weight: bold;
     font-style: italic;
     border: none;
+    box-shadow: none;               /* quita sombra default */
 }
 
+/* Fondo terracota para los botones abiertos */
 .accordion-button:not(.collapsed) {
-    background-color: var(--terracota);
+    background-color: var(--petroleo);
     color: var(--beige);
     box-shadow: none;
 }
 
+/* Efecto al enfocar el botón */
 .accordion-button:focus {
-    box-shadow: 0 0 5px var(--menta);
+    box-shadow: 0 0 5px var(--terracota);
 }
 
+/* Cuerpo del acordeón */
 .accordion-body {
-    background-color: var(--beige);
+    background-color: var(--beige); /* mismo color que el fondo */
     color: var(--petroleo);
     font-size: 16px;
     font-style: italic;
     border-left: 3px solid var(--terracota);
+    margin: 10px 0;
 }
 
 /* ------------------------------
@@ -609,8 +508,7 @@ body {
 --------------------------------*/
 .testimonios{
     padding: 20px;
-    margin-top: 10px;
-    gap: 15px;
+    margin: 20px 0;               /* margen uniforme arriba y abajo */
     background-color: var(--beige);
     border-bottom: 2px solid var(--terracota);
 }
@@ -668,16 +566,14 @@ body {
 --------------------------------*/
 
 .politica_cancelacion {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 2rem 1.5rem;
-  background-color: var(--beige);
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;                    /* mismo padding interno */
+    margin: 20px 0;                   /* margen uniforme arriba y abajo */
+    background-color: var(--beige);   /* mantiene el fondo */
+    border-bottom: 2px solid var(--terracota); /* borde uniforme */
 }
 
 .politica_cancelacion h2 {
-  font-style: italic;
+    font-style: italic;
     color: var(--petroleo);
     font-size: 32px;
     font-weight: bolder;
@@ -686,25 +582,25 @@ body {
 }
 
 .politica_cancelacion ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;        
+    padding: 0;
+    margin: 0 auto;            /* centra horizontalmente el ul */
+    max-width: 600px;          /* controla ancho de la lista */
 }
 
 .politica_cancelacion li {
-  position: relative;
-  padding-left: 2rem;
-  margin-bottom: 1rem;
-  line-height: 1.6;
-  color: #333;
+    text-align: left;
+    margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
-.politica_cancelacion li::before {
-  content: "✔️";
-  position: absolute;
-  left: 0;
-  top: 0;
+.politica_cancelacion li i {
+  color: var(--petroleo); 
+  margin-right: 8px;         /* espacio entre ícono y texto */
+  font-size: 1.2rem;         /* tamaño del ícono */
+  vertical-align: middle;    /* alinea mejor con el texto */
 }
+
 
 
 
@@ -737,8 +633,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  /*gap: 30px;
-  margin-bottom: 15px;*/
+  
 }
 
 /* Navegación izquierda */
@@ -796,12 +691,6 @@ body {
   text-decoration: none;
 }
 
-
-/*----RESPONSIVE DESIGN----*/
-
-/* ---------------------------
-   RESPONSIVE DESIGN
-----------------------------*/
 
 /* ---------------------------
    RESPONSIVE DESIGN COMPLETO

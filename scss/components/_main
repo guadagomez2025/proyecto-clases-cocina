@@ -1,0 +1,286 @@
+/*   CARRUSEL   */
+
+.d-block.w-100 {
+width: 100%;
+height: 200px;
+object-fit: cover;
+margin-top: 10px;
+}
+
+.presentacion {
+  @include flex-center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  background-color: $beige;
+  border-bottom: 2px solid $terracota;
+  padding-bottom: 20px;
+
+    h2 {
+    width: 100%;
+    font-style: italic;
+    color: $beige;
+    font-size: 32px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: $petroleo;
+    border-bottom: 2px solid $terracota;
+    }
+
+    p {
+    font-size: 16px;
+    width: 50%;
+    color: $petroleo;
+    font-weight: bold;
+    padding-left: 20px;
+    }
+
+    img {
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    border: 3px solid $petroleo;
+    margin-right: 20px;
+    object-fit: cover;
+    }
+}
+
+.servicios {
+padding: 20px;
+margin-top: 10px;
+gap: 15px;
+background-color: $beige;
+border-bottom: 2px solid $terracota;
+
+    h2 {
+    font-style: italic;
+    color: $petroleo;
+    font-size: 32px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 20px;
+    }
+
+    .servicios_contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;  /* permite que bajen a otra fila */
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+        div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $terracota;
+        border: 2px solid $petroleo;
+        border-radius: 10px;
+        width: 280px;
+        height: 380px;
+        padding: 10px;
+        text-align: center;
+        transition: transform 0.3s;
+        }
+
+        img {
+        width: 100%px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 8px;
+        }
+
+        h3 {
+        color: $petroleo;
+        font-size: 20px;
+        font-weight: bolder;
+        margin: 10px 0;
+        }
+
+        a {
+        background: $petroleo;
+        color: white;
+        text-decoration: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: background 0.3s;
+        &:hover {
+        background-color: $menta;
+        }
+        }
+    }
+}
+
+/*!---PÁGINA CLASES Y CENAS ---*/
+
+.clases_contenedor_gral {
+background-color: $beige;
+padding: 20px;
+    h1{
+    width: 100%;
+    font-style: italic;
+    color: $beige;
+    font-size: 32px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: $petroleo;
+    border-bottom: 2px solid $terracota;
+    }
+    p{
+    font-size: 16px;
+    color: $petroleo;
+    font-weight: bold;
+    text-align: center;   
+    padding: 0 20px;      /* opcional: padding lateral en lugar de solo a la izquierda */
+    }
+    .videos_contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-bottom: 2px solid %terracota;
+    padding-bottom: 20px;
+        iframe {
+        width: 400px;
+        height: 250px;
+        border-radius: 8px;
+        }
+    }
+    .grilla{
+        h2{
+        font-style: italic;
+        color: $petroleo;
+        font-size: 32px;
+        font-weight: bolder;
+        text-align: center;
+        padding: 20px;
+        }
+        .grilla_contenedor {
+        margin: 5px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: auto; /*---cada fila se adapta a su contenido--*/
+        gap: 15px;
+        }
+            div{
+            background-color: #eeeeee;
+            border-radius: 10px;
+            padding: 15px;
+            }
+            iframe{
+            width: 100%;
+            min-height: 250px; /*---altura mínima---*/
+            border-radius: 8px;
+            object-fit: cover;
+            }
+            h3{
+            color: $petroleo;
+            font-size: 20px;
+            font-weight: bolder;
+            margin-bottom: 10px;
+            text-align: center;   
+            }
+            p{
+            color: $petroleo;
+            font-size: 14px !important;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            font-weight: normal !important; /* quitar negrita */
+            text-align: left !important;     /* justificado a la izquierda */
+                span{
+                font-weight: bold;
+                }
+            .propuestas{
+            grid-column: span 2;
+            }
+            .participantes{
+            grid-column: span 1;
+            } 
+            .fechas{
+            grid-column: span 1;
+            } 
+            .costos{
+            grid-column: span 1;
+            }
+            .menu{  
+            grid-column: span 1;
+            }
+            .form{
+            grid-column: span 2;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #eeeeee;
+                .row{
+                    .col-md-6{
+                        .mb-3{
+                        margin-bottom: 8px;
+                            .form-label{
+                            font-size: 13px;    
+                            }
+                            .form-control{
+                            padding: 4px 6px;
+                            font-size: 14px;
+                            }
+                        }
+                    }
+                }
+                .d-grid{
+                    .btn{
+                        .btn-inscripcion{
+                        background-color: $terracota;
+                        color: $beige;
+                        font-weight: bold;
+                        border: none;
+                        border-radius: 6px;
+                        padding: 10px;
+                        transition: background-color 0.3s ease, transform 0.2s ease;
+                        &:hover{
+                        background-color: $petroleo;
+                        transform: scale(1.05);
+                        }
+                    }
+                }
+            }                    
+            .mapa{
+            grid-column: span 1;
+            display: flex;
+            flex-direction: column;
+            }
+            }        
+            }
+}
+}
+
+/*--GRILLA CON INFO DE CENAS - CONTENEDOR GRID----*/
+.cenas_contenedor_gral {
+background-color: #fdfaf5;
+padding: 20px;
+margin-top: 10px;
+    h2{
+    width: 100%;
+    font-style: italic;
+    color: $beige;
+    font-size: 32px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: $petroleo;
+    border-bottom: 2px solid $terracota;
+    }
+    p{
+    font-size: 16px;
+    color: $petroleo;
+    font-weight: bold;
+    padding-left: 20px;
+    text-align: center;
+    }
+}

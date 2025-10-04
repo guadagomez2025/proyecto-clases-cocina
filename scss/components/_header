@@ -1,0 +1,74 @@
+/* Para que el contenido no quede tapado por el navbar fijo */
+body {
+padding-top: 140px; /* ajustá según la altura de tu navbar/logo */
+    .navbar {
+    height: 120px;
+    background-color: $beige !important;
+    border-bottom: 2px solid $terracota;
+    padding: 10px 30px;
+        .navbar-brand{
+            img{
+                .logo {
+                height: 100px;
+                width: 100px;
+                border-radius: 5px;
+                display: block;
+                }
+                
+            }
+        } 
+        .nav-link{
+        text-decoration: none;
+        color: $beige;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: $terracota;
+        padding: 10px 15px;
+        border-radius: 6px;
+        margin: 0 5px;
+        transition: background 0.3s;
+        &:hover{
+        background-color: $petroleo;
+        color: $beige;
+        }
+        &:active{
+        background-color: $petroleo !important;
+        color: $beige !important;
+        }    
+        } 
+        .idiomas{
+            img{
+            height: 35px;
+            border: 2px solid $petroleo;
+            border-radius: 4px;
+            margin: 5px;
+            transition: transform 0.3s ease;
+            &:hover {
+            transform: scale(1.2);
+            }
+            }
+            a{
+            &.active img{
+            background-color: $petroleo; /* fondo oscuro */
+            padding: 3px; /* espacio para que el fondo se vea */
+            border-radius: 6px;
+            }    
+            }
+                            
+        }       
+    }
+    .dropdown-menu{
+    background-color: $beige;
+    border: 2px solid $petroleo;
+        .dropdown-item {
+        color: $petroleo;
+        font-weight: bold;
+        &:hover{
+        background-color: $terracota;
+        color: $beige;    
+        }
+        }
+    }
+}
+
+

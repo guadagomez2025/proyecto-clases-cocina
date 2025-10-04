@@ -1,0 +1,32 @@
+@use "../base/funcionalidades" as func;
+@use "../base/generales" as gen;
+@use "../base/mediaquerys" as mq;
+
+/*?-----FUENTES------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/*?-----RESET------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*!----HTML---*/
+
+:root {
+    --terracota: #e1641e;
+    --menta: #85dcb8;
+    --petroleo: #3a3e5f;
+    --beige: #fdf6f0;
+}
+
+
+/*!-----BODY------*/
+body {
+    font-family: "Archivo", sans-serif;
+    background-color: var(--beige);
+    color: var(--petroleo);
+}
