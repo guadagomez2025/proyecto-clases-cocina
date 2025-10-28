@@ -1,0 +1,419 @@
+/* RESPONSIVE*/
+
+/* === 1200px === */
+@media (max-width: 1200px) {
+    header {
+        .navbar {
+        padding: 10px 20px;
+
+            .navbar-brand .logo {
+            height: 90px;
+            width: 90px;
+            }
+
+            .nav-link {
+            font-size: 15px;
+            margin: 0 4px;
+            }
+        }
+    }
+
+    main {
+        .presentacion {
+            p {
+            width: 60%;
+            }
+        }
+
+        .grilla_contenedor {
+        grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    footer {
+        .footer_contenido {
+        justify-content: space-between;
+        }
+    }
+}
+
+/* === 992px === */
+@media (max-width: 992px) {
+    header {
+        .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+
+            .navbar-collapse {
+            text-align: center;
+            }
+
+            .nav-link {
+            display: block;
+            margin: 5px 0;
+            }
+
+            .idiomas {
+            margin-top: 10px;
+
+                img {
+                height: 30px;
+                }
+            }
+        }
+    }
+
+    main {
+        .presentacion {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+            h2 {
+            font-size: 28px;
+            }
+
+            p {
+            width: 80%;
+            padding: 10px;
+            font-size: 15px;
+            }
+
+            img {
+            width: 60%;
+            height: auto;
+            margin: 15px 0;
+            }
+        }
+
+        .servicios {
+            h2 {
+            font-size: 28px;
+            }
+
+            .servicios_contenedor {
+            flex-wrap: wrap;
+            justify-content: center;
+
+                div {
+                width: 45%;
+                margin-bottom: 15px;
+                }
+            }
+        }
+
+        .videos_contenedor iframe {
+        width: 80%;
+        height: 250px;
+        }
+
+        .grilla_contenedor {
+        grid-template-columns: repeat(2, 1fr);
+        }
+
+        .consultas_contenedor {
+            .titulo {
+            font-size: 28px;
+            }
+        }
+    }
+
+    footer {
+        .footer_contenido {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        }
+    }
+}
+
+/* === 768px === */
+@media (max-width: 768px) {
+    header {
+        .navbar {
+            .navbar-brand .logo {
+            height: 80px;
+            width: 80px;
+            }
+        }
+    }
+
+    main {
+        .presentacion {
+            h2 {
+            font-size: 26px;
+            }
+
+            p {
+            width: 90%;
+            font-size: 14px;
+            }
+
+            img {
+            width: 80%;
+            }
+        }
+
+        .servicios {
+            h2 {
+            font-size: 26px;
+            }
+
+            .servicios_contenedor div {
+            width: 90%;
+            height: auto;
+
+                h3 {
+                font-size: 18px;
+                }
+
+                a {
+                font-size: 14px;
+                }
+            }
+        }
+
+        .videos_contenedor iframe {
+        width: 100%;
+        height: 220px;
+        }
+
+        .grilla_contenedor {
+        grid-template-columns: 1fr;
+        }
+
+        .clases_contenedor_gral,
+        .cenas_contenedor_gral {
+            h1,
+            h2 {
+            font-size: 26px;
+            padding: 15px;
+            }
+        }
+
+        .consultas_contenedor {
+            .titulo {
+            font-size: 26px;
+            }
+        }   
+    } 
+
+    footer {
+    padding: 15px;
+
+        .footer_contenido {
+        font-size: 14px;
+
+            img {
+            width: 80px;
+            }
+        }
+    }
+}
+
+/* === 576px === */
+@media (max-width: 576px) {
+    header {
+        .navbar {
+        padding: 10px;
+
+            .navbar-brand .logo {
+            height: 70px;
+            width: 70px;
+            }
+
+            .nav-link {
+            font-size: 14px;
+            padding: 8px 10px;
+            }
+        }
+    }
+
+    main {
+        .presentacion {
+            h2 {
+            font-size: 22px;
+            }
+
+            p {
+                font-size: 13px;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .servicios {
+            h2 {
+            font-size: 22px;
+            }
+
+            .servicios_contenedor div {
+            width: 100%;
+            }
+        }
+
+        .videos_contenedor iframe {
+        height: 200px;
+        }
+
+        .grilla_contenedor {
+        grid-template-columns: 1fr;
+        gap: 10px;
+
+            h3 {
+            font-size: 18px;
+            }
+        }
+
+        .clases_contenedor_gral,
+        .cenas_contenedor_gral {
+        padding: 10px;
+
+            p {
+            font-size: 14px;
+            }
+        }
+
+        .consultas_contenedor {
+        padding: 10px;
+
+            .titulo {
+            font-size: 22px;
+            }
+
+            .accordion-button {
+            font-size: 14px;
+            }
+        }
+    }
+
+    footer {
+    padding: 10px;
+
+        .footer_contenido {
+        font-size: 13px;
+
+            img {
+            width: 60px;
+            }
+        }
+    }
+    }
+
+/* === 400px === */
+@media (max-width: 400px) {
+    header {
+        .navbar {
+            .navbar-brand .logo {
+            height: 60px;
+            width: 60px;
+            }
+
+            .nav-link {
+            font-size: 13px;
+            }
+        }
+    }
+
+    main {
+        .presentacion {
+            h2 {
+            font-size: 20px;
+            }
+
+            p {
+            font-size: 12px;
+            }
+        }
+
+        .servicios {
+            h2 {
+            font-size: 20px;
+            }
+        }
+
+        .grilla_contenedor {
+            h3 {
+            font-size: 16px;
+            }
+        }
+
+        .consultas_contenedor {
+            .titulo {
+            font-size: 20px;
+            }
+        }
+    }
+
+    footer {
+        .footer_contenido {
+        font-size: 12px;
+        }
+    }
+}
+
+/* === 350px === */
+@media (max-width: 350px) {
+    header {
+        .navbar {
+            .navbar-brand .logo {
+            height: 50px;
+            width: 50px;
+            }
+
+            .nav-link {
+            font-size: 12px;
+            padding: 6px 8px;
+            }
+        }
+    }
+
+    main {
+        .presentacion {
+            h2 {
+            font-size: 18px;
+            }
+
+            p {
+            font-size: 11px;
+            }
+        }
+
+        .servicios {
+            h2 {
+            font-size: 18px;
+            }
+
+            .servicios_contenedor div {
+            padding: 8px;
+            }
+        }
+
+        .clases_contenedor_gral,
+        .cenas_contenedor_gral,
+        .consultas_contenedor {
+            h1,
+            h2,
+            .titulo {
+            font-size: 18px;
+            }
+        }
+
+        .accordion-button {
+        font-size: 12px;
+        }
+    }
+
+    footer {
+        .footer_contenido {
+        font-size: 11px;
+
+            img {
+            width: 50px;
+            }
+        }
+    }
+}
