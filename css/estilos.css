@@ -77,9 +77,10 @@ body {
   }
   main .presentacion h2 {
     font-size: 28px;
+    text-align: center;
   }
   main .presentacion p {
-    width: 80%;
+    width: 85%;
     padding: 10px;
     font-size: 15px;
   }
@@ -87,6 +88,7 @@ body {
     width: 60%;
     height: auto;
     margin: 15px 0;
+    display: block;
   }
   main .servicios h2 {
     font-size: 28px;
@@ -99,20 +101,42 @@ body {
     width: 45%;
     margin-bottom: 15px;
   }
+  main .videos_contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
   main .videos_contenedor iframe {
     width: 80%;
-    height: 250px;
+    max-width: 600px;
+    aspect-ratio: 16/9;
+    height: auto;
+    display: block;
   }
   main .grilla_contenedor {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center;
   }
   main .consultas_contenedor .titulo {
     font-size: 28px;
+  }
+  main .contenedor-tarjetas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  main .contenedor-tarjetas .tarjeta {
+    width: 80%;
+    margin: 0 auto;
   }
   footer .footer_contenido {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 15px;
   }
 }
 /* === 768px === */
@@ -123,20 +147,28 @@ body {
   }
   main .presentacion h2 {
     font-size: 26px;
+    text-align: center;
   }
   main .presentacion p {
     width: 90%;
+    text-align: center;
     font-size: 14px;
   }
   main .presentacion img {
-    width: 80%;
+    width: 85%;
+    display: block;
+    margin: 0 auto;
   }
   main .servicios h2 {
     font-size: 26px;
   }
+  main .servicios .servicios_contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
   main .servicios .servicios_contenedor div {
     width: 90%;
-    height: auto;
+    margin-bottom: 1rem;
   }
   main .servicios .servicios_contenedor div h3 {
     font-size: 18px;
@@ -146,10 +178,8 @@ body {
   }
   main .videos_contenedor iframe {
     width: 100%;
-    height: 220px;
-  }
-  main .grilla_contenedor {
-    grid-template-columns: 1fr;
+    max-width: 500px;
+    height: auto;
   }
   main .clases_contenedor_gral h1,
   main .clases_contenedor_gral h2,
@@ -158,19 +188,33 @@ body {
     font-size: 26px;
     padding: 15px;
   }
+  main .clases_contenedor_gral .grilla_contenedor,
+  main .cenas_contenedor_gral .grilla_contenedor {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 0 10px;
+  }
   main .consultas_contenedor .titulo {
     font-size: 26px;
   }
-  footer {
-    padding: 15px;
-  }
-  footer .footer_contenido {
-    font-size: 14px;
-  }
-  footer .footer_contenido img {
-    width: 80px;
+  main .contenedor-tarjetas .tarjeta {
+    width: 90%;
   }
 }
+footer {
+  padding: 15px;
+}
+footer .footer_contenido {
+  font-size: 14px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+footer .footer_contenido img {
+  width: 80px;
+}
+
 /* === 576px === */
 @media (max-width: 576px) {
   header .navbar {
@@ -186,9 +230,11 @@ body {
   }
   main .presentacion h2 {
     font-size: 22px;
+    text-align: center;
   }
   main .presentacion p {
     font-size: 13px;
+    text-align: center;
   }
   main .presentacion img {
     width: 100%;
@@ -198,13 +244,27 @@ body {
   }
   main .servicios .servicios_contenedor div {
     width: 100%;
+    text-align: center;
+  }
+  main .videos_contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 10px 0;
   }
   main .videos_contenedor iframe {
-    height: 200px;
+    width: 90%;
+    max-width: 480px;
+    height: auto;
+    aspect-ratio: 16/9;
+    display: block;
   }
   main .grilla_contenedor {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 0.8rem;
+    justify-items: center;
   }
   main .grilla_contenedor h3 {
     font-size: 18px;
@@ -226,11 +286,34 @@ body {
   main .consultas_contenedor .accordion-button {
     font-size: 14px;
   }
+  main .contenedor-tarjetas {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .contenedor-tarjetas .tarjeta {
+    width: 95%;
+    text-align: center;
+  }
   footer {
-    padding: 10px;
+    padding: 15px;
   }
   footer .footer_contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
     font-size: 13px;
+  }
+  footer .footer_contenido .footer-nav ul,
+  footer .footer_contenido .footer-consulta ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
   }
   footer .footer_contenido img {
     width: 60px;
@@ -247,12 +330,22 @@ body {
   }
   main .presentacion h2 {
     font-size: 20px;
+    text-align: center;
   }
   main .presentacion p {
     font-size: 12px;
+    text-align: center;
   }
   main .servicios h2 {
     font-size: 20px;
+  }
+  main .videos_contenedor iframe {
+    width: 100%;
+    max-width: none;
+    height: auto;
+  }
+  main .grilla_contenedor {
+    padding: 0 5px;
   }
   main .grilla_contenedor h3 {
     font-size: 16px;
@@ -260,8 +353,17 @@ body {
   main .consultas_contenedor .titulo {
     font-size: 20px;
   }
+  main .contenedor-tarjetas .tarjeta {
+    width: 100%;
+    font-size: 14px;
+  }
   footer .footer_contenido {
     font-size: 12px;
+    gap: 8px;
+  }
+  footer .footer_contenido .footer-nav ul,
+  footer .footer_contenido .footer-consulta ul {
+    gap: 4px;
   }
 }
 /* === 350px === */
@@ -287,8 +389,13 @@ body {
     padding: 8px;
   }
   main .clases_contenedor_gral h1,
-  main .clases_contenedor_gral h2,
-  main .clases_contenedor_gral .titulo,
+  main .clases_contenedor_gral h2 {
+    font-size: 18px;
+  }
+  main .clases_contenedor_gral .videos_contenedor iframe {
+    width: 100%;
+    height: auto;
+  }
   main .cenas_contenedor_gral h1,
   main .cenas_contenedor_gral h2,
   main .cenas_contenedor_gral .titulo,
