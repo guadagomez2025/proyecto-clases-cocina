@@ -123,5 +123,64 @@ font-size: 14px;
     .footer-info .copy {
     color: white !important;
     }
-  
-}        
+}  
+/* ---FIX FOOTER VISUAL ----*/
+    footer.footer {
+    background-color: #3a3e5f;
+    color: #fdf6f0;
+    margin-top: 30px;
+    font-family: "Archivo", sans-serif;
+    }
+
+/* ---FIX FRASE FOOTER --- */
+    .footer-frase,
+    .footer-frase p {
+    background-color: #3a3e5f !important;
+    color: #fdf6f0 !important;
+    text-align: center;
+    font-size: 20px;
+    font-style: italic;
+    margin: 0;
+    padding: 12px 0;
+    display: block;
+    position: relative;
+    z-index: 10;
+    }
+
+
+/* --- CONTENIDO GENERAL--- */
+    footer .footer-info {
+    background-color: #3a3e5f;
+    color: #fdf6f0 !important;
+    text-align: center;
+    padding: 20px 0;
+    }
+
+    footer .footer-info p {
+    color: #fdf6f0 !important;
+    margin: 8px 0;
+    }
+
+    footer .footer-info a {
+    color: #fdf6f0 !important;
+    text-decoration: none;
+    }
+
+    footer .footer-info a:hover {
+    color: #e1641e !important;
+    }
+
+/* --- ÍCONOS DE REDES --- */
+    footer .footer-info .redes a i {
+    font-family: "bootstrap-icons" !important;
+    font-style: normal !important;
+    color: #fdf6f0 !important;
+    font-size: 28px;
+    margin: 0 10px;
+    display: inline-block;
+    vertical-align: middle;
+    }
+
+    footer .footer-info .redes a i::before {
+    display: inline-block;
+    }      
