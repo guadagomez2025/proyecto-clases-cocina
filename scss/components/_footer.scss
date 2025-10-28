@@ -88,6 +88,19 @@ font-size: 14px;
         color: var.$terracota; 
             }
         }
+
+        /* FORZAR LA VISUALIZACIÓN DE LOS ÍCONOS DE LOS REDES DE BOOTSTRAP */
+            i.bi {
+            font-family: "bootstrap-icons" !important;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            display: inline-block;
+            vertical-align: middle;
+}
+
     }
     .copy{
     margin-top: 10px;

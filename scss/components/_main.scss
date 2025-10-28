@@ -121,12 +121,12 @@ border-bottom: 2px solid var.$terracota;
     }
 }
 
-/*!---PÁGINA CLASES Y CENAS ---*/
-
-.clases_contenedor_gral {
+/* === SECCIÓN CLASES Y CENAS === */
+.clases_contenedor_gral,
+.cenas_contenedor_gral {
 background-color: var.$beige;
 padding: 20px;
-    h1{
+    h1, h2 {
     width: 100%;
     font-style: italic;
     color: var.$beige;
@@ -138,13 +138,16 @@ padding: 20px;
     background-color: var.$petroleo;
     border-bottom: 2px solid var.$terracota;
     }
-    p{
+    p {
     font-size: 16px;
     color: var.$petroleo;
     font-weight: bold;
-    text-align: center;   
-    padding: 0 20px;      /* opcional: padding lateral en lugar de solo a la izquierda */
+    text-align: center;
+    padding: 0 20px;
     }
+
+  /* --- SECCIÓN DE VIDEOS (SOLO CLASES) --- */
+  &.clases_contenedor_gral {
     .videos_contenedor {
     display: flex;
     justify-content: center;
@@ -158,8 +161,11 @@ padding: 20px;
         border-radius: 8px;
         }
     }
-    .grilla{
-        h2{
+}
+
+  /* --- GRILLA COMÚN A AMBOS --- */
+    .grilla {
+        h2 {
         font-style: italic;
         color: var.$petroleo;
         font-size: 32px;
@@ -171,122 +177,266 @@ padding: 20px;
         margin: 5px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: auto; /*---cada fila se adapta a su contenido--*/
+        grid-auto-rows: auto;
         gap: 15px;
-        }
-            div{
+            div {
             background-color: #eeeeee;
             border-radius: 10px;
             padding: 15px;
             }
-            iframe{
+            iframe {
             width: 100%;
-            min-height: 250px; /*---altura mínima---*/
+            min-height: 250px;
             border-radius: 8px;
             object-fit: cover;
             }
-            h3{
+            h3 {
             color: var.$petroleo;
             font-size: 20px;
             font-weight: bolder;
             margin-bottom: 10px;
-            text-align: center;   
+            text-align: center;
             }
-            p{
+            p {
             color: var.$petroleo;
             font-size: 14px !important;
             line-height: 1.5;
             margin-bottom: 10px;
-            font-weight: normal !important; /* quitar negrita */
-            text-align: left !important;     /* justificado a la izquierda */
-                span{
+            font-weight: normal !important;
+            text-align: left !important;
+                span {
                 font-weight: bold;
                 }
-            .propuestas{
-            grid-column: span 2;
-            }
-            .participantes{
-            grid-column: span 1;
             } 
-            .fechas{
-            grid-column: span 1;
-            } 
-            .costos{
-            grid-column: span 1;
-            }
-            .menu{  
-            grid-column: span 1;
-            }
-            .form{
+
+      /* --- DISTRIBUCIÓN DEL GRID --- */
+            .propuestas { grid-column: span 2; }
+            .participantes { grid-column: span 1; }
+            .fechas { grid-column: span 1; }
+            .costos { grid-column: span 1; }
+            .menu { grid-column: span 1; }
+            .form {
             grid-column: span 2;
             display: flex;
             flex-direction: column;
-            padding: 10px;
-            border-radius: 10px;
             background-color: #eeeeee;
-                .row{
-                    .col-md-6{
-                        .mb-3{
+            border-radius: 10px;
+            padding: 10px;
+                .row {
+                    .col-md-6 {
+                        .mb-3 {
                         margin-bottom: 8px;
-                            .form-label{
-                            font-size: 13px;    
-                            }
-                            .form-control{
-                            padding: 4px 6px;
-                            font-size: 14px;
-                            }
+                .form-label {
+                font-size: 13px;
+                }
+                .form-control {
+                padding: 4px 6px;
+                font-size: 14px;
+                }
                         }
                     }
                 }
-                .d-grid{
-                    .btn{
-                        .btn-inscripcion{
-                        background-color: var.$terracota;
-                        color: var.$beige;
-                        font-weight: bold;
-                        border: none;
-                        border-radius: 6px;
-                        padding: 10px;
-                        transition: background-color 0.3s ease, transform 0.2s ease;
-                        &:hover{
-                        background-color: var.$petroleo;
-                        transform: scale(1.05);
-                        }
+                .d-grid {
+                    .btn-inscripcion {
+                    background-color: var.$terracota !important;
+                    color: var.$beige !important;
+                    font-weight: bold;
+                    border: none;
+                    border-radius: 6px;
+                    padding: 10px;
+                    transition: background-color 0.3s ease, transform 0.2s ease;
+                    &:hover {
+                    background-color: var.$petroleo !important;
+                    transform: scale(1.05);
+                    }
                     }
                 }
-            }                    
-            .mapa{
+            }   
+            .mapa {
             grid-column: span 1;
             display: flex;
             flex-direction: column;
             }
-            }        
-            }
-}
+        }
+    }   
+    /* AJUSTE VISUAL SOLO PARA CENAS */
+    &.cenas_contenedor_gral {
+    background-color: #fdfaf5;
+    margin-top: 10px;
+    }
 }
 
-/*--GRILLA CON INFO DE CENAS - CONTENEDOR GRID----*/
-.cenas_contenedor_gral {
-background-color: #fdfaf5;
-padding: 20px;
-margin-top: 10px;
-    h2{
-    width: 100%;
+/* PAGINAS CONSULTAS */
+
+.consultas_contenedor{
+    padding: 20px;
+    margin: 20px 0;               /* margen uniforme arriba y abajo */
+    background-color: var.$beige;
+    border-bottom: 2px solid var.$terracota;
+}
+    .titulo{
     font-style: italic;
     color: var.$beige;
     font-size: 32px;
     font-weight: bolder;
     text-align: center;
     padding: 20px;
-    margin: 20px 0;
+    margin: 20px; 
     background-color: var.$petroleo;
     border-bottom: 2px solid var.$terracota;
     }
-    p{
-    font-size: 16px;
-    color: var.$petroleo;
-    font-weight: bold;
-    padding-left: 20px;
-    text-align: center;
+    .preguntas-frecuentes{
+    padding: 20px;
+    margin: 20px 0;               /* margen uniforme arriba y abajo */
+    background-color: var.$beige;
     }
+        h2{
+        font-style: italic;
+        color: var.$petroleo;
+        font-size: 28px;
+        font-weight: bolder;
+        text-align: center;
+        padding: 10px;
+        }
+        p{
+        font-size: 16px;
+        color: var.$petroleo;
+        font-weight: bold;
+        padding-left: 20px   
+        }
+
+/*!-----ACORDEON DE PREGUNTAS FRECUENTES------*/
+    .accordion-header{
+    font-style: italic;
+    color: var.$petroleo;
+    font-size: 18px;
+    font-weight: bolder;
+    }
+
+        /* Fondo beige para los botones colapsados */
+        .accordion-button {
+        background-color: var.$petroleo; /* coincide con el fondo de la sección */
+        color: var.$beige;         
+        font-weight: bold;
+        font-style: italic;
+        border: none;
+        box-shadow: none;               /* quita sombra default */
+        }
+
+/* Fondo terracota para los botones abiertos */
+        .accordion-button:not(.collapsed) {
+        background-color: var.$petroleo;
+        color: var.$beige;
+        box-shadow: none;
+        }
+
+/* Efecto al enfocar el botón */
+        .accordion-button:focus {
+        box-shadow: 0 0 5px var.$terracota;
+        }
+
+    .acordion-body{
+    background-color: var.$beige; /* mismo color que el fondo */
+    color: var.$petroleo;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: italic;
+    border-left: 3px solid var.$terracota;
+    margin: 10px 0;    
+    }
+
+
+/* SECCION OPINIONES - TESTIMONIOS */
+.testimonios{
+padding: 20px;
+margin: 20px 0;               /* margen uniforme arriba y abajo */
+background-color: var.$beige;
+border-bottom: 2px solid var.$terracota;
 }
+    h2 {
+    font-style: italic;
+    color: var.$petroleo;
+    font-size: 32px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 20px;
+    }
+
+    .contenedor-tarjetas {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;  /* permite que bajen a otra fila */
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    }
+
+        .tarjeta {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #ff914d;
+        border: 2px solid var.$petroleo;
+        border-radius: 10px;
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        }
+
+            .tarjeta p {
+            color: var.$petroleo;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: italic;
+            margin: 10px 0;
+            }
+                span {
+                color: var.$petroleo;
+                font-size: 14px;
+                font-weight: bold;
+                margin-top: auto;
+                }
+
+/* ------------------------------
+   Sección Política de Cancelación
+--------------------------------*/
+
+.politica_cancelacion {
+padding: 20px;                    /* mismo padding interno */
+margin: 20px 0;                   /* margen uniforme arriba y abajo */
+background-color: var.$beige;   /* mantiene el fondo */
+border-bottom: 2px solid var.$terracota; /* borde uniforme */
+}
+
+    h2 {
+    font-style: italic;
+    color: var.$petroleo;
+    font-size: 32px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 20px;
+    }
+
+        ul {
+        list-style: none;        
+        padding: 0;
+        margin: 0 auto;            /* centra horizontalmente el ul */
+        max-width: 600px;          /* controla ancho de la lista */
+        }
+
+            li {
+            text-align: left;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            }
+
+                i {
+                color: var.$petroleo; 
+                margin-right: 8px;         /* espacio entre ícono y texto */
+                font-size: 1.2rem;         /* tamaño del ícono */
+                vertical-align: middle;    /* alinea mejor con el texto */
+                }
